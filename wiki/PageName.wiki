@@ -1,0 +1,11 @@
+#summary One-sentence summary of this page.
+
+= Tutorial =
+
+{{{
+java -Xms128m -Xmx512m ECO6 input_arff_file output_file remove_number stop_number
+}}}
+
+{{{
+java -classpath weka.jar:. -Xms128m -Xmx1512m ECO6 dataFile.arff resultsFile.txt 100 100
+}}}
