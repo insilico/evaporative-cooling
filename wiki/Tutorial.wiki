@@ -1,4 +1,4 @@
-#Usage for Evaporative Cooling Feature Selection.
+# Usage examples for Evaporative Cooling Feature Selection.
 
 = Tutorial =
 
