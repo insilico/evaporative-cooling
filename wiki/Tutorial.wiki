@@ -2,10 +2,19 @@
 
 = Tutorial =
 
+==1. Convert file to arff format.==
+You will find code to convert certain file formats to arff in the fileConverter subdirectory.  The .out format is the genomeSIM file format.  The following command converts .out to the .reformat format, which introduces a row with numbered attribute names starting with X1 ending with Class attribute.  Subsequent rows correspond to sample instances. The suffix .reformat is automatically appended to output file name.
 {{{
-java -Xms128m -Xmx512m ECO6 input_arff_file output_file remove_number stop_number
+java -Xms128m -Xmx1500m ExecuteMain 1 XOR.1.out
+}}}
+ 
+==2. Run EC.==
+General usage.  
+{{{
+java -classpath weka.jar:. -Xms128m -Xmx512m ECO6 input_arff_file output_file remove_number stop_number
 }}}
 
+Remove 200 attributes at each evaporation step.  Stop when 100 best attributes remain.  
 {{{
-java -classpath weka.jar:. -Xms128m -Xmx1512m ECO6 dataFile.arff resultsFile.txt 100 100
+java -classpath weka.jar:. -Xms128m -Xmx1512m ECO6 dataFile.arff resultsFile.txt 200 100
 }}}
