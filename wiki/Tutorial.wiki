@@ -1,7 +1,7 @@
 = Tutorial =
 This page provides the steps necessary to run EC on a genetic association data set.  An example data set is provided (XOR.1.out.reformat.arff) for an XOR model with 5% heritability involving 1500 SNPs and 500 cases and 500 controls.  The genotypes are encoded as 0/1/2 and the phenotype states are encoded as 0/1.  Any nominal encoding is allowed, such as AA/AB/BB for genotypes and Affected/Unaffected for the phenotype.  The functional SNPs in the XOR model are X5 and X10.   
 
-==1. Convert file to arff format.==
+==1. Convert data to arff format==
 EC uses the Attribute-Relation File Format ([http://www.cs.waikato.ac.nz/~ml/weka/arff.html arff]).  You will find code to convert certain file formats to arff in the `fileConverter` subdirectory.  Other formats will be supported as requested.
 
 Option 1.  .out to .reformat.  The .out format is the [http://chgr.mc.vanderbilt.edu/ritchielab/method.php?method=genomesim genomeSIM] file format, which does not contain attribute names.  The following command converts .out to the .reformat format, which introduces a row with numbered attribute names starting with X1 and ending with the Class (phenotype) attribute.  Subsequent rows correspond to sample instances. The suffix .reformat is automatically appended to the converted output file name.
@@ -14,7 +14,7 @@ Option 2. .reformat to arff.  The suffix .arff is automatically appended to the 
 java -Xms128m -Xmx1500m ExecuteMain 2 XOR.1.out.reformat
 }}}  
 
-==2. Run EC.==
+==2. Run EC==
 General usage. The genetic association data is contained in the `input_arff_file` and the EC results are written to `output_results_file`.  The parameter `remove_number` is the number of SNPs that are removed at each evaporation step, and EC stops when `stop_number` SNPs remain from the original data set.    
 {{{
 java -classpath weka.jar:. -Xms128m -Xmx512m ECO6 input_arff_file output_results_file remove_number stop_number
