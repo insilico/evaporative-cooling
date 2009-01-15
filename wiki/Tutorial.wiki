@@ -1,9 +1,7 @@
-# Usage examples for Evaporative Cooling Feature Selection.
-
 = Tutorial =
 
 ==1. Convert file to arff format.==
-EC uses the arff format.  You will find code to convert certain file formats to arff in the fileConverter subdirectory.  
+EC uses the arff format.  You will find code to convert certain file formats to arff in the `fileConverter` subdirectory.  
 
 Option 1.  .out to .reformat.  The .out format is the genomeSIM file format.  The following command converts .out to the .reformat format, which introduces a row with numbered attribute names starting with X1 ending with Class attribute.  Subsequent rows correspond to sample instances. The suffix .reformat is automatically appended to output file name.
 {{{
