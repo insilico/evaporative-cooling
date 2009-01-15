@@ -15,7 +15,7 @@ java -Xms128m -Xmx1500m ExecuteMain 2 XOR.1.out.reformat
 }}}  
 
 ==2. Run EC.==
-General usage. The genetic association data is contained in the `input_arff_file` and the EC results are written to `output_results_file`.  The parameter `remove_number` is the number of SNPs that are removed at each evaporation step and EC stops when `stop_number` SNPs remain from the original data set.    
+General usage. The genetic association data is contained in the `input_arff_file` and the EC results are written to `output_results_file`.  The parameter `remove_number` is the number of SNPs that are removed at each evaporation step, and EC stops when `stop_number` SNPs remain from the original data set.    
 {{{
 java -classpath weka.jar:. -Xms128m -Xmx512m ECO6 input_arff_file output_results_file remove_number stop_number
 }}}
@@ -24,4 +24,4 @@ The following command removes 200 attributes at each evaporation step and stops 
 {{{
 java -classpath weka.jar:. -Xms128m -Xmx1512m ECO6 XOR.1.out.reformat.arff XOR.ECRESULTS.txt 200 100
 }}}
-The output file `XOR.ECRESULTS.txt` ranks the SNPs by their composite score, column `F=E-TS`.  The other columns are the Random Forest importance score, a transformed version of this score, and a transformed Relief-F score.  The file header gives the cross-validation accuracy of the final collection of SNPs and the final coupling temperature.  
+The SNPs in the results file `XOR.ECRESULTS.txt` are ranked by their composite score, column `F=E-TS`.  The other columns are the Random Forest importance score, a transformed version of this score, and a transformed Relief-F score.  The file header gives the cross-validation accuracy of the final collection of SNPs and the final coupling temperature.  
