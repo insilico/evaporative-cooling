@@ -20,7 +20,7 @@ General usage. The genetic association data is contained in the `input_arff_file
 java -classpath weka.jar:. -Xms128m -Xmx512m ECO6 input_arff_file output_results_file remove_number stop_number
 }}}
 
-The following command removes 200 attributes at each evaporation step and stops when 100 best attributes remain.  
+The following command removes 200 attributes at each evaporation step and stops when 100 best attributes remain.  This particular run could take a few hours.  
 {{{
 java -classpath weka.jar:. -Xms128m -Xmx1512m ECO6 XOR.1.out.reformat.arff XOR.ECRESULTS.txt 200 100
 }}}
