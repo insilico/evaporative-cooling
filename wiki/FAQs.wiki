@@ -1,7 +1,6 @@
 = FAQs =
 
-==How do I compile the Fortran code in the parf2/ directory using the gfortran compiler?==
-
-=== Make the following change to the Makefile then run "make parf."
+===How do I compile the Fortran code in the parf2/ directory using the gfortran compiler?===
+Make the following change to the Makefile then run "make parf."
 FC = gfortran
-FFLAGS = -g -pg -fno-range-check ===
+FFLAGS = -g -pg -fno-range-check
