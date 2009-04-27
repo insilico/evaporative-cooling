@@ -1,6 +1,10 @@
 == Microsfoft Windows GUI version of Evaporative Cooling, EvaCooling.jar ==  
 
-*Config tab:* "Target number of variables" is the final number of SNPs selected.  "Number of variables removed each loop" is the number of SNPs removed during each evaporation step.  "Number of trees" is a Random Forest parameter. Checking "No grid optimization" fixes the coupling Temperature between Random Forest and Relief-F to unity.  This results in faster running but no optimization of the coupling. By selecting one of the "Calculate Only" check boxes, this tool can function as an iterative backwards elimination version of either Random Forest or Relief-F.  
+*Config tab:* "Target number of variables" is the final number of SNPs selected.  "Number of variables removed each loop" is the number of SNPs removed during each evaporation step.  "Number of trees" is a Random Forest parameter. 
+
+Checking "No grid optimization" fixes the coupling Temperature between Random Forest and Relief-F to unity (Grid Step Size is ignored).  This results in faster running but no optimization of the coupling. 
+
+By selecting one of the "Calculate Only" check boxes, this tool can function as an iterative backwards elimination version of either Random Forest or Relief-F.  
 
 *ArffConverter/* contains FileConversionGUI.jar, which is a gui for converting data to arff.  We are  working on adding other formats to this utility, but .reformat is a fairly reasonable format to start with.
 
