@@ -1,0 +1,8 @@
+= Microsfoft Windows GUI version of Evaporative Cooling, EvaCooling.jar =  
+
+Config tab:
+Checking "No grid optimization" fixes the coupling Temperature between Random Forest and Relief-F to unity.  This results in faster running but no optimization of the coupling. By selecting one of the "Calculate Only" check boxes, this tool can function as an iterative backwards elimination version of either Random Forest or Relief-F.  
+
+ArffConverter/ contains FileConversionGUI.jar, which is a gui for converting data to arff.  We are  working on adding other formats to this utility, but .reformat is a fairly reasonable format to start with.
+
+Known bug: If these files are saved in a directory with a very long name, the program may not execute.  Saving them in the C:\ root direcory is safe.
