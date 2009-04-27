@@ -1,6 +1,6 @@
 == Microsfoft Windows GUI version of Evaporative Cooling, EvaCooling.jar ==  
 
-*Config tab:* "Target number of variables" is the final number of SNPs selected.  "Number of variables removed each loop" is the number of SNPs removed during each evaporation step.  "Number of trees" is a Random Forest parameter. 
+*Config tab:* "Target number of variables" is the final number of SNPs selected.  "Number of variables removed each loop" is the number of SNPs removed during each evaporation step.  "Number of trees" is a Random Forest parameter.  Increasing any of these parameters decreases the run time.  
 
 Checking "No grid optimization" fixes the coupling Temperature between Random Forest and Relief-F to unity (Grid Step Size is ignored).  This results in faster running but no optimization of the coupling. 
 
