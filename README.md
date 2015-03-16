@@ -1,7 +1,6 @@
 # evaporative-cooling
 *Automatically exported from code.google.com/p/evaporative-cooling*
 
-# Introduction
 Evaporative cooling (EC) feature selection is a command-line data mining software implementation in Java and Fortran for filtering genetic association data. EC integrates Random Forests and Relief-F attribute importance measures in order to balance independent and interaction effects while removing attributes that are irrelevant to the phenotype. EC has been tested on single-nucleotide polymorphism (SNP) data. For those with access to a cluster, the parallel version of EC will be released soon.
 
 # Microsoft Windows GUI version of Evaporative Cooling, EvaCooling.jar
